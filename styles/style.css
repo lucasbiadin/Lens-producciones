@@ -1,0 +1,740 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+/*PEGAR---->    font-family: 'Be Vietnam Pro', sans-serif;
+                font-family: 'Roboto', sans-serif;  
+                font-family: 'Playfair Display', serif; 
+                font-family: 'Noto Sans', sans-serif;
+                font-family: 'Gilda Display', serif;  */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body__galeria--bgDark {
+  background: #19282F;
+}
+
+header {
+  background-color: #0c2f3d;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+  width: 100%;
+  height: 5.5em;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.boton__portfolio {
+  color: rgba(255, 255, 255, 0.541);
+}
+
+.boton__portfolio:hover {
+  color: white;
+  display: block;
+}
+
+.dropdown-menu {
+  background-color: #0c2f3dfb;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #253f49;
+}
+
+.boton__portfolio__link {
+  color: rgba(255, 255, 255, 0.541);
+}
+
+.boton__portfolio__link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.sec {
+  width: 100%;
+  background-color: #19282F;
+}
+
+.principal {
+  height: 110vh;
+  width: 100%;
+}
+
+.principal__contenedorH1 {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.principal__contenedorH1 .principal__h1 {
+  font-family: 'Gilda Display', serif;
+  letter-spacing: 0.5em;
+  color: #ffebcd;
+  margin: 0 0 1.5em 1em;
+}
+
+.nosotros {
+  height: 100vh;
+  background-image: url(../multimedia/images/nosotros/camara.jpg);
+  background-size: cover;
+  display: flex;
+}
+
+.nosotros .cuadroAmarillo {
+  background-color: #f8cd0d;
+}
+
+.nosotros .cuadroAmarillo__img {
+  display: none;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.portfolio .portfolio__titulo {
+  color: #19282F;
+  padding-left: 0.8em;
+  font-size: 70px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D3ECA7;
+  height: 100%;
+}
+
+.portfolio .portfolio__titulo .span__port, .portfolio .portfolio__titulo .span__fo, .portfolio .portfolio__titulo .span__lio {
+  font-size: 1.9em;
+  letter-spacing: normal;
+}
+
+.portfolio .portfolio__contenedor__cajas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0 1em 0;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaXV {
+  width: 45%;
+  height: 90%;
+  border-radius: 10px;
+  background-image: url(../multimedia/images/caja15años.JPG);
+  background-size: cover;
+  background-position-y: -3em;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaXV:hover {
+  transform: scale(1.05);
+  transition: all 1s;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaXV .portfolio__linkXV .textoXVaños {
+  display: none;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaXV:hover .portfolio__linkXV {
+  transition: all 0.9s;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaXV:hover .portfolio__linkXV .textoXVaños {
+  display: block;
+  color: antiquewhite;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas {
+  width: 45%;
+  height: 90%;
+  border-radius: 10px;
+  background-image: url(../multimedia/images/cajaBodas.jpg);
+  background-size: cover;
+  background-position-y: -3em;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas:hover {
+  transform: scale(1.05);
+  transition: all 1s;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas .portfolio__linkBodas .textoBodas {
+  display: none;
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas:hover .portfolio__linkBodas {
+  transition: all 0.9s;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas:hover .portfolio__linkBodas .textoBodas {
+  display: block;
+  color: antiquewhite;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* GALERIA */
+.galeria__contenedor__titulo {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.galeria__contenedor__titulo .galeria__titulo {
+  color: #D3ECA7;
+  font-size: 4em;
+  font-family: 'Gilda Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.galeria {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  /* GALERIA BODAS */
+}
+
+.galeria .contenedorImgXV {
+  width: 95%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 12em);
+  text-align: center;
+  gap: 10px;
+}
+
+.galeria .contenedorImgXV :hover {
+  transform: scale(1.05);
+  transition: all 0.8s;
+}
+
+.galeria .contenedorImgXV .imgXV1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-image: url(../multimedia/images/galeria/XVaños/vertical-1.jpg);
+  background-size: cover;
+  background-position-y: -40px;
+}
+
+.galeria .contenedorImgXV .imgXV2 {
+  grid-column: 2/4;
+  grid-row: 1/3;
+  background-image: url(../multimedia/images/galeria/XVaños/horizontal-11.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.galeria .contenedorImgXV .imgXV3 {
+  grid-column: 4/5;
+  grid-row: 1/4;
+  background-image: url(../multimedia/images/galeria/XVaños/vertical-2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.galeria .contenedorImgXV .imgXV4 {
+  grid-column: 1/3;
+  grid-row: 3/5;
+  background-image: url(../multimedia/images/galeria/XVaños/horizontal-2.jpg);
+  background-size: cover;
+}
+
+.galeria .contenedorImgXV .imgXV5 {
+  grid-column: 3/4;
+  grid-row: 3/6;
+  background-image: url(../multimedia/images/galeria/XVaños/vertical-3.jpg);
+  background-size: cover;
+}
+
+.galeria .contenedorImgXV .imgXV6 {
+  grid-column: 4/5;
+  grid-row: 4/6;
+  background-image: url(../multimedia/images/galeria/XVaños/vertical-12.jpg);
+  background-size: cover;
+  background-position-y: -5em;
+}
+
+.galeria .contenedorImgXV .imgXV7 {
+  grid-column: 1/3;
+  grid-row: 5/8;
+  background-image: url(../multimedia/images/galeria/XVaños/horizontal-9.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.galeria .contenedorImgXV .imgXV8 {
+  grid-column: 3/5;
+  grid-row: 6/8;
+  background-image: url(../multimedia/images/galeria/XVaños/horizontal-1.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB {
+  width: 95%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 30em);
+  text-align: center;
+  gap: 10px;
+}
+
+.galeria .contenedorImgB :hover {
+  transform: scale(1.05);
+  transition: all 0.8s;
+}
+
+.galeria .contenedorImgB .imgB1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url(../multimedia/images/galeria/bodas/boda-1.jpg);
+  background-size: cover;
+}
+
+.galeria .contenedorImgB .imgB2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-image: url(../multimedia/images/galeria/bodas/boda-2.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB .imgB3 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-image: url(../multimedia/images/galeria/bodas/boda-3.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB .imgB4 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-image: url(../multimedia/images/galeria/bodas/boda-4.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB .imgB5 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-image: url(../multimedia/images/galeria/bodas/boda-5.jpg);
+  background-size: cover;
+}
+
+.galeria .contenedorImgB .imgB6 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-image: url(../multimedia/images/galeria/bodas/boda-6.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB .imgB7 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-image: url(../multimedia/images/galeria/bodas/boda-7.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+.galeria .contenedorImgB .imgB8 {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  background-image: url(../multimedia/images/galeria/bodas/boda-8.jpg);
+  background-size: cover;
+}
+
+.servicios {
+  height: 100vh;
+  border-top: #474747 3px solid;
+  border-bottom: #474747 3px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicios .servicios__titulo, .servicios .servicios__lens {
+  width: 90%;
+  margin-bottom: 1.1em;
+  color: #f8cd0d;
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 0.5em;
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+}
+
+.servicios .servicios__lens {
+  margin-top: 20px;
+  font-size: 2em;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.servicios .servicios__lens span {
+  margin-right: 9px;
+}
+
+.servicios .carouselContainer {
+  width: 50%;
+  height: 50vh;
+  border: #f8cd0d solid 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.servicios .carouselContainer .carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.servicios .carouselContainer .carousel .carousel-inner {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.servicios .carouselContainer .carousel .carousel-inner .carousel-item .servicios__parrafos {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.contacto {
+  height: max-content;
+}
+
+.contacto .contacto__contenedor {
+  background-color: white;
+  width: 90%;
+  margin: 30px 0 30px 0;
+  border: 5px solid #114358;
+  border-radius: 10px;
+}
+
+.contacto .contacto__contenedor .contacto__contenedor__titulo {
+  display: flex;
+  justify-content: center;
+}
+
+.contacto .contacto__contenedor .contacto__contenedor__titulo .contacto__titulo {
+  color: #114358;
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 20px;
+}
+
+.contacto .contacto__contenedor .contacto__form {
+  border: 3px solid #114358;
+  border-radius: 10px;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__form__bloque {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__form__bloque .contacto__bloque__inputs {
+  width: 50%;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__form__bloque .contacto__form__textarea {
+  width: 50%;
+  height: 14em;
+  margin: 20px;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__form__bloque .contacto__form__textarea textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__boton__contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__boton__contenedor .contacto__boton {
+  width: 15%;
+  font-size: 1.2em;
+  background-color: #114358;
+}
+
+.contacto .contacto__contenedor .contacto__form .contacto__boton__contenedor :hover {
+  background-color: #808080;
+}
+
+.footer {
+  background-color: white;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer__titulo {
+  margin-bottom: 1.5em;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.footer .footer__redes {
+  display: flex;
+}
+
+.footer .footer__redes .footer__redes__item {
+  margin: 0 2em 0 2em;
+}
+
+.footer .footer__redes .footer__redes__item .footer__redes__link {
+  color: grey;
+  text-decoration: none;
+  font-size: 2.5em;
+}
+
+.footer .footer__redes .footer__redes__item :hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+@media all and (min-width: 320px) and (max-width: 425px) {
+  header {
+    background-color: #114358;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+  }
+  .logoContainer {
+    width: 40%;
+  }
+  .logo {
+    width: 100%;
+  }
+  .navbar {
+    display: flex;
+    justify-content: start;
+  }
+  .dropdown-menu {
+    background-color: #0c2f3d;
+  }
+  .dropdown-menu .dropdown-item {
+    color: white;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #253f49;
+  }
+  .sec {
+    width: 100%;
+    height: auto;
+    background-color: #f1ece7;
+  }
+  .principal {
+    height: max-content;
+    width: 100%;
+  }
+  .principal .principal__contenedorH1 {
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 2em;
+  }
+  .principal .principal__contenedorH1 .principal__h1 {
+    font-family: 'Gilda Display', serif;
+    letter-spacing: 0.5em;
+    color: #ffffff;
+    font-size: large !important;
+    margin-left: 4em;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .nosotros {
+    height: max-content;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .nosotros .cuadroAmarillo {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .nosotros .cuadroAmarillo .cuadroAmarillo__img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+  }
+  .nosotros .cuadroAmarillo .cuadroAmarillo__texto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    background-color: #f2dd1f8a;
+  }
+  .nosotros .cuadroAmarillo .cuadroAmarillo__texto #nos {
+    font-size: large;
+    width: max-content;
+  }
+  .nosotros .cuadroAmarillo .cuadroAmarillo__texto .cuadroAmarillo__contenedorParrafo {
+    margin-top: 2px !important;
+    width: 80%;
+  }
+  .nosotros .cuadroAmarillo .cuadroAmarillo__texto .cuadroAmarillo__contenedorParrafo .cuadroAmarillo__parrafo {
+    font-size: 10px;
+  }
+  .portfolio {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+  .portfolio .portfolio__titulo {
+    color: #D3ECA7;
+    padding-left: 0.8em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.7em;
+    margin-top: 20px;
+  }
+  .portfolio .portfolio__contenedor__cajas {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 20px 0;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaXV {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    background-image: url(../multimedia/images/caja15años.JPG);
+    background-size: cover;
+    background-position-x: 20px;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaXV .portfolio__linkXV .textoXVaños {
+    display: none;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaXV:hover .portfolio__linkXV {
+    transition: all 0.9s;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaXV:hover .portfolio__linkXV .textoXVaños {
+    display: block;
+    color: antiquewhite;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    background-image: url(../multimedia/images/cajaBodas.jpg);
+    background-size: cover;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas .portfolio__linkBodas .textoBodas {
+    display: none;
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas:hover .portfolio__linkBodas {
+    transition: all 0.9s;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .portfolio .portfolio__contenedor__cajas .portfolio__cajaBodas:hover .portfolio__linkBodas .textoBodas {
+    display: block;
+    color: antiquewhite;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 850px) {
+  .principal {
+    height: max-content;
+  }
+  .nosotros {
+    height: 80vh;
+    background-image: url(../multimedia/images/nosotros/camara.jpg);
+    background-size: cover;
+    background-position: -15em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,699 @@
+@import "./partials/variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+/*PEGAR---->    font-family: 'Be Vietnam Pro', sans-serif;
+                font-family: 'Roboto', sans-serif;  
+                font-family: 'Playfair Display', serif; 
+                font-family: 'Noto Sans', sans-serif;
+                font-family: 'Gilda Display', serif;  */
+                
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.body__galeria--bgDark{
+    background: $section-color;
+}
+header{
+    background-color: $header-color;
+    position:sticky;
+    top: 0px;
+    z-index: 4;
+    width: 100%;
+    height: 5.5em;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+
+.boton__portfolio{
+    color: $menu-color-font;
+}
+.boton__portfolio:hover{
+    color: $submenu-color-font;
+    display: block;
+    
+}
+.dropdown-menu{
+    background-color: $submenu-color;
+}
+.dropdown-menu .dropdown-item{
+    color: $submenu-color-font;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color:$submenu-item-hover-color ;
+}
+.boton__portfolio__link{
+    color: $menu-color-font;
+    &:hover{
+        text-decoration: none;
+        color: white;
+    }
+}
+.sec{
+    width: 100%;
+    background-color: $section-color;
+    
+}
+// main con sass
+.principal{
+    height:110vh;
+    width: 100%;
+}
+.principal__contenedorH1{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    .principal__h1{
+        font-family: 'Gilda Display', serif;
+        letter-spacing: 0.5em;
+        color: #ffebcd;
+        margin: 0 0 1.5em 1em;
+    }
+}
+// seccion nosotros con sass
+.nosotros{
+    height: 100vh;
+    background-image: url(../multimedia/images/nosotros/camara.jpg);
+    background-size: cover;
+    display: flex;
+    .cuadroAmarillo{
+        background-color: $amarillo-complemetario;
+    }
+    .cuadroAmarillo__img{
+        display: none;
+    }
+}
+.portfolio{
+    width: 100%;
+    height: 100vh ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .portfolio__titulo{
+        color: $section-color;
+        padding-left: 0.8em;
+        font-size: 70px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $titulos-sec-color;
+        height: 100%;
+        .span__port{
+            font-size: 1.9em;
+            letter-spacing: normal;
+        }
+        .span__fo{
+            @extend .span__port;
+        }
+
+        .span__lio{
+            @extend .span__port;
+        }
+    }
+    .portfolio__contenedor__cajas{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 0 1em 0;
+        .portfolio__cajaXV{
+            width: 45%;
+            height: 90%;
+            border-radius: 10px;
+            background-image: url(../multimedia/images/caja15años.JPG);
+            background-size: cover;
+            background-position-y:-3em;
+            &:hover{
+                transform: scale(1.05);
+                transition: all 1s;
+            }
+            .portfolio__linkXV{
+                .textoXVaños{
+                    display: none;
+                }
+            }
+            &:hover{
+                .portfolio__linkXV{
+                    transition: all 0.9s;
+                    height: 100%;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    .textoXVaños{
+                        display: block;
+                        color:antiquewhite;
+                        font-size: 50px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2em;
+                        margin-left: 0.2em;
+                    }
+                }
+            }
+        }
+        .portfolio__cajaBodas{
+            width: 45%;
+            height: 90%;
+            border-radius: 10px;
+            background-image: url(../multimedia/images/cajaBodas.jpg);
+            background-size: cover;
+            background-position-y: -3em;
+            &:hover{
+                transform: scale(1.05);
+                transition: all 1s;
+            }
+            .portfolio__linkBodas{
+                .textoBodas{
+                    display: none;
+                }
+            }
+            &:hover{
+                .portfolio__linkBodas{
+                    transition: all 0.9s;
+                    height: 100%;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    .textoBodas{
+                        display: block;
+                        color:antiquewhite;
+                        font-size: 50px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+/* GALERIA */
+.galeria__contenedor__titulo{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .galeria__titulo{
+        color: $titulos-sec-color;
+        font-size: 4em;
+        font-family: 'Gilda Display', serif;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+}
+.galeria{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:2em;
+    .contenedorImgXV{
+        width: 95%;
+        height:auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(7, 12em);
+        text-align: center;
+        gap: 10px;
+        :hover{
+            transform: scale(1.05);
+            transition: all 0.8s;
+        }
+        .imgXV1{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            background-image: url(../multimedia/images/galeria/XVaños/vertical-1.jpg);
+            background-size: cover;
+            background-position-y: -40px;
+        }
+        .imgXV2{
+            grid-column: 2/4;
+            grid-row: 1/3;
+            background-image: url(../multimedia/images/galeria/XVaños/horizontal-11.jpg);
+            background-size: cover;
+            background-position: bottom
+        }
+        .imgXV3{
+            grid-column: 4/5;
+            grid-row: 1/4;
+            background-image: url(../multimedia/images/galeria/XVaños/vertical-2.jpg);
+            background-size: cover;
+            background-position: center
+        }
+        .imgXV4{
+            grid-column: 1/3;
+            grid-row: 3/5;
+            background-image: url(../multimedia/images/galeria/XVaños/horizontal-2.jpg);
+            background-size: cover;
+        }
+        .imgXV5{
+            grid-column: 3/4;
+            grid-row: 3/6;
+            background-image: url(../multimedia/images/galeria/XVaños/vertical-3.jpg);
+            background-size: cover;
+        }
+        .imgXV6{
+            grid-column: 4/5;
+            grid-row: 4/6;
+            background-image: url(../multimedia/images/galeria/XVaños/vertical-12.jpg);
+            background-size: cover;
+            background-position-y:-5em;
+        }
+        .imgXV7{
+            grid-column: 1/3;
+            grid-row: 5/8;
+            background-image: url(../multimedia/images/galeria/XVaños/horizontal-9.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .imgXV8{
+            grid-column: 3/5;
+            grid-row: 6/8;
+            background-image: url(../multimedia/images/galeria/XVaños/horizontal-1.jpg);
+            background-size: cover;
+            background-position-y: center;
+        }
+    } /* GALERIA BODAS */
+    .contenedorImgB{
+        width: 95%;
+        height:auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 30em);
+        text-align: center;
+        gap: 10px;
+        :hover{
+            transform: scale(1.05);
+            transition: all 0.8s;
+        }
+        .imgB1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-image: url(../multimedia/images/galeria/bodas/boda-1.jpg);
+            background-size: cover;
+        }
+        .imgB2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-image: url(../multimedia/images/galeria/bodas/boda-2.jpg);
+            background-size: cover;
+            background-position-y: center;
+        }
+        .imgB3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-image: url(../multimedia/images/galeria/bodas/boda-3.jpg);
+            background-size: cover;
+            background-position-y: center;
+        }
+        .imgB4{
+            grid-column:2/3 ;
+            grid-row:2/3 ;
+            background-image: url(../multimedia/images/galeria/bodas/boda-4.jpg);
+            background-size: cover;
+            background-position-y: center
+        }
+        .imgB5{
+            grid-column:1/2;
+            grid-row: 3/4;
+            background-image: url(../multimedia/images/galeria/bodas/boda-5.jpg);
+            background-size: cover;
+        
+        }
+        .imgB6{
+            grid-column:2/3;
+            grid-row:3/4;
+            background-image: url(../multimedia/images/galeria/bodas/boda-6.jpg);
+            background-size: cover;
+            background-position-y: center
+        }
+        .imgB7{
+            grid-column:1/2 ;
+            grid-row: 4/5;
+            background-image: url(../multimedia/images/galeria/bodas/boda-7.jpg);
+            background-size: cover;
+            background-position-y: center
+        }
+        .imgB8{
+            grid-column: 2/3;
+            grid-row:4/5 ;
+            background-image: url(../multimedia/images/galeria/bodas/boda-8.jpg);
+            background-size: cover;
+        }
+    }
+}
+// SECCION SERVICIOS//
+.servicios{
+    height: 100vh;
+    border-top: rgb(71, 71, 71) 3px solid;
+    border-bottom: rgb(71, 71, 71) 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .servicios__titulo{
+        width: 90%;
+        margin-bottom: 1.1em;
+        color: $amarillo-complemetario;
+        text-transform: uppercase;
+        font-size: 3em;
+        letter-spacing: 0.5em ;
+        display: flex;
+        justify-content: center;
+        font-weight: normal;
+    }
+    // uso de extend
+    .servicios__lens{
+        @extend .servicios__titulo;
+        margin-top: 20px;
+        font-size: 2em;
+        text-transform:none;
+        letter-spacing: normal;
+        span{
+            margin-right: 9px;
+        }
+    }
+    // width y height con operadores
+    .carouselContainer{
+        width: ($var1) - ($var2);
+        height: $alto - 50;
+        border: $amarillo-complemetario solid 5px;
+        display: flex;
+        justify-content: center;
+        .carousel{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .carousel-inner{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                .carousel-item{
+                    .servicios__parrafos{
+                        color: white;
+                        font-size: 2em;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
+// SECCION CONTACTO
+.contacto{
+    height: max-content;
+    .contacto__contenedor{
+        background-color: $submenu-color-font;
+        width: 90%;
+        margin: 30px 0 30px 0;
+        border: 5px solid $header-color-sm ;
+        border-radius: 10px;
+        .contacto__contenedor__titulo{
+            display: flex;
+            justify-content: center;
+            .contacto__titulo{
+                color: $header-color-sm;
+                margin-bottom: 40px;
+                font-size: 40px;
+                text-transform: uppercase;
+                font-weight: normal;
+                letter-spacing: 20px;
+            }
+        }
+        .contacto__form{
+            border: 3px solid $header-color-sm;
+            border-radius: 10px;
+            .contacto__form__bloque{
+                padding: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                .contacto__bloque__inputs{
+                    width: 50%;
+                }
+                .contacto__form__textarea{
+                    width: 50%;
+                    height: 14em;
+                    margin: 20px;
+                    textarea{
+                        resize: none;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .contacto__boton__contenedor{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1em;
+                .contacto__boton{
+                    width: 15%;
+                    font-size: 1.2em;
+                    background-color: $header-color-sm;
+                }
+                :hover{
+                    background-color: #808080;
+                }
+            }
+        }
+    }
+}
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .footer__titulo{
+        margin-bottom: 1.5em;
+        font-weight: lighter;
+        text-transform: uppercase;
+    }
+    .footer__redes{
+        display: flex;
+        .footer__redes__item{
+            margin: 0 2em 0 2em;
+            .footer__redes__link{
+                color: grey;
+                text-decoration: none;
+                font-size: 2.5em;
+            }
+            :hover{
+                transform: scale(1.1);
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+// medias queries
+@media all and (min-width: 320px) and (max-width: 425px){
+    header{
+        background-color: $header-color-sm ;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+    }
+    .logoContainer{
+        width: 40%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .navbar{
+        display: flex;
+        justify-content: start;
+    }
+    .dropdown-menu{
+        background-color:#0c2f3d ;
+    }
+    .dropdown-menu .dropdown-item{
+        color: white;
+    }
+    .dropdown-menu .dropdown-item:hover{
+        background-color:#253f49 ;
+    }
+    .sec{
+        width:100%;
+        height: auto;
+        background-color: #f1ece7;
+    }
+    .principal{
+        height: max-content;
+        width: 100%;
+        .principal__contenedorH1{
+            position: absolute;
+            z-index: 2;
+            margin-bottom: 2em;
+            .principal__h1 {
+                font-family: 'Gilda Display', serif;
+                letter-spacing: 0.5em;
+                color: #ffffff;
+                font-size: large !important;
+                margin-left: 4em;
+            }
+        }
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    // nosotros con sass
+    .nosotros{
+        height:max-content;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        .cuadroAmarillo{
+            width: 100% !important;
+            display: flex;
+            justify-content:center;
+            .cuadroAmarillo__img{
+                display: block;
+                width: 100%;
+                z-index: 1;
+            }
+            .cuadroAmarillo__texto{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                position: absolute;
+                background-color: #f2dd1f8a;   
+                #nos{
+                    font-size: large;
+                    width: max-content;
+                }
+                .cuadroAmarillo__contenedorParrafo{
+                    margin-top: 2px !important;
+                    width: 80%;
+                    .cuadroAmarillo__parrafo{
+                        font-size: 10px;
+                    }
+                }
+                
+            }
+        }
+    }
+    .portfolio{
+        width: 100%;
+        height: 80vh ; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        .portfolio__titulo{
+            color: $titulos-sec-color;
+            padding-left: 0.8em;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: 0.7em;
+            margin-top: 20px;
+        }
+        .portfolio__contenedor__cajas{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0 20px 0;
+            .portfolio__cajaXV{
+                width: 100%;
+                height: 50%;
+                border-radius: 10px;
+                background-image: url(../multimedia/images/caja15años.JPG);
+                background-size: cover;
+                background-position-x: 20px ;
+                .portfolio__linkXV{
+                    .textoXVaños{
+                        display: none;
+                    }
+                }
+                &:hover{
+                    .portfolio__linkXV{
+                        transition: all 0.9s;
+                        height: 100%;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        .textoXVaños{
+                            display: block;
+                            color:antiquewhite;
+                            font-size: 50px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.2em;
+                            margin-left: 0.2em;
+                        }
+                    }
+                }
+            }
+            .portfolio__cajaBodas{
+                width: 100%;
+                height: 50%;
+                border-radius: 10px;
+                background-image: url(../multimedia/images/cajaBodas.jpg);
+                background-size: cover;
+                .portfolio__linkBodas{
+                    .textoBodas{
+                        display: none;
+                    }
+                }
+                &:hover{
+                    .portfolio__linkBodas{
+                        transition: all 0.9s;
+                        height: 100%;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        .textoBodas{
+                            display: block;
+                            color:antiquewhite;
+                            font-size: 50px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (min-width: 720px) and (max-width: 850px){
+    // main con sass
+    .principal{
+        height:max-content;
+    }
+    .nosotros{
+        height: 80vh;
+        background-image: url(../multimedia/images/nosotros/camara.jpg);
+        background-size: cover;
+        background-position: -15em;
+    }
+}
