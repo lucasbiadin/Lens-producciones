@@ -67,24 +67,34 @@ header {
 .sec {
   width: 100%;
   background-color: #19282F;
+  height: max-content;
 }
 
 .principal {
-  height: 110vh;
   width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.principal__contenedorH1 {
-  width: 100%;
+.principal .principal__contenedorH1 {
+  width: max-content;
+  height: max-content;
   position: absolute;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  margin-top: 20em;
 }
 
-.principal__contenedorH1 .principal__h1 {
+.principal .principal__contenedorH1 .principal__h1 {
   font-family: 'Gilda Display', serif;
+  text-transform: uppercase;
+  font-size: 10em;
   letter-spacing: 0.5em;
   color: #ffebcd;
-  margin: 0 0 1.5em 1em;
+  padding: 0 0 0 60px;
 }
 
 .nosotros {

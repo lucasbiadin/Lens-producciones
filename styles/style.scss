@@ -59,22 +59,33 @@ header{
 .sec{
     width: 100%;
     background-color: $section-color;
+    height: max-content;
     
 }
 // main con sass
 .principal{
-    height:110vh;
     width: 100%;
-}
-.principal__contenedorH1{
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    .principal__h1{
-        font-family: 'Gilda Display', serif;
-        letter-spacing: 0.5em;
-        color: #ffebcd;
-        margin: 0 0 1.5em 1em;
+    height:max-content;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    .principal__contenedorH1{
+        width:max-content;
+        height: max-content;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        margin-top: 20em ;
+        .principal__h1{
+            font-family: 'Gilda Display', serif;
+            text-transform: uppercase;
+            font-size: 10em;
+            letter-spacing: 0.5em;
+            color: #ffebcd;
+            padding: 0 0 0 60px ;
+        }
     }
 }
 // seccion nosotros con sass
