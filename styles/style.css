@@ -570,7 +570,7 @@ header {
   header {
     background-color: #114358;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
   }
   .logoContainer {
@@ -739,6 +739,7 @@ header {
 @media (min-width: 720px) and (max-width: 850px) {
   .principal {
     height: max-content;
+    z-index: 2;
   }
   .nosotros {
     height: 80vh;

@@ -520,7 +520,7 @@ header{
     header{
         background-color: $header-color-sm ;
         position: fixed;
-        z-index: 3;
+        z-index: 4;
         width: 100%;
     }
     .logoContainer{
@@ -700,6 +700,7 @@ header{
     // main con sass
     .principal{
         height:max-content;
+        z-index: 2;
     }
     .nosotros{
         height: 80vh;
