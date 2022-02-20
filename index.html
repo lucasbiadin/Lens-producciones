@@ -45,7 +45,7 @@
             </div>
         </nav>
     </header>
-    <main class="principal">
+    <main class="sec principal">
         <div class="principal__contenedorH1 " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
             <h1 id="" class="principal__h1 ">Lens</h1>
         </div>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="carousel-item">
                         <img src="./multimedia/images/carousel/boda-3.jpg" alt="boda de pablo y karina"
-                        width="100%" height="auto" class="boda3">
+                        width="100%" height="auto" >
                     </div>
                     <div class="carousel-item">
                         <img src="./multimedia/images/carousel/boda-4.jpg" alt="boda de rosario y lucas"
@@ -79,10 +79,10 @@
                 </div>
                 <!-- Left and right controls -->
                 <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
+                    <span class="carousel-icon carousel-control-prev-icon"></span>
                 </a>
                 <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
+                    <span class="carousel-icon carousel-control-next-icon"></span>
                 </a>
             </div>
         </div>
@@ -101,7 +101,12 @@
     </section>
         <!-- SECCION PORTFOLIO DE EVENTOS-->
         <section class="sec portfolio" id="saltoPort">
-            <h2 class="portfolio__titulo" id="port"><span class="span__port">Port</span><span class="span__fo">fo</span><span class="span__lio">lio</span></h2>
+            <h2 class="portfolio__titulo" id="port">
+                <span class="span__portfolio span__port">Port</span>
+                <span class="span__portfolio span__fo">fo</span>
+                <span class="span__portfolio span__lio">lio</span>
+                <span class="portfolio__titulo--media"> portfolio</span>
+            </h2>
             <article class="portfolio__contenedor__cajas">
                 <div class="portfolio__cajaXV">
                     <a class="portfolio__linkXV" href="./pagesPortfolios/portfolio15años.html">
@@ -121,10 +126,10 @@
         <div class="carouselContainer" id="home">
             <div id="demo" class="carousel slide " data-ride="carousel">
                 <!-- Indicadores -->
-                <ul class="carousel-indicators">
+                <!-- <ul class="carousel-indicators">
                     <li data-target="#demo" data-slide-to="0" class="active"></li>
                     <li data-target="#demo" data-slide-to="1"></li>
-                </ul>
+                </ul> -->
                     <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active border-solid-5">
@@ -139,15 +144,15 @@
         <p class="servicios__lens">Contactanos para mas info</p>
     </section>
     <!-- SECCION CONTACTO -->
-    <section class="sec contacto d-flex justify-content-center" id="saltoCont" >
-        <article class="contacto__contenedor d-flex flex-column p-5">
+    <section class="sec contacto" id="saltoCont" >
+        <article class="contacto__contenedor">
             <div class="contacto__contenedor__titulo">
-                <h2 class="contacto__titulo" id="cont">Escribinos</h2>
+                <h2 class="contacto__titulo">Escribinos</h2>
             </div>
             <form class="contacto__form" action="/action_page.php">
                 <div class="contacto__form__bloque">
                     <div class="contacto__bloque__inputs">
-                        <div class="contacto__form__item form-group">
+                        <div class="contacto__form__div form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" class="form-control input1" placeholder="Ingrese su nombre" id="nombre" required>
                         </div>
@@ -161,7 +166,7 @@
                         </div>
                     </div>
                     <div class="contacto__form__textarea form-group">
-                        <textarea class="form-control input4" id="textarea" placeholder="Contanos que tenes en mente"></textarea>
+                        <textarea class="form-control" id="textarea" placeholder="Contanos que tenes en mente"></textarea>
                     </div>
                 </div>
                 <div class="contacto__boton__contenedor">

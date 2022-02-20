@@ -69,7 +69,6 @@ header{
     display: flex;
     align-items:center;
     justify-content: center;
-
     .principal__contenedorH1{
         width:max-content;
         height: max-content;
@@ -77,7 +76,7 @@ header{
         z-index: 2;
         display: flex;
         align-items: center;
-        margin-top: 20em ;
+        // margin-top: 20em ;
         .principal__h1{
             font-family: 'Gilda Display', serif;
             text-transform: uppercase;
@@ -124,9 +123,11 @@ header{
         .span__fo{
             @extend .span__port;
         }
-
         .span__lio{
             @extend .span__port;
+        }
+        .portfolio__titulo--media{
+            display: none;
         }
     }
     .portfolio__contenedor__cajas{
@@ -371,8 +372,8 @@ header{
 // SECCION SERVICIOS//
 .servicios{
     height: 100vh;
-    border-top: rgb(71, 71, 71) 3px solid;
-    border-bottom: rgb(71, 71, 71) 3px solid;
+    border-top: $submenu-color 2px solid;
+    border-bottom: $submenu-color 2px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -395,9 +396,6 @@ header{
         font-size: 2em;
         text-transform:none;
         letter-spacing: normal;
-        span{
-            margin-right: 9px;
-        }
     }
     // width y height con operadores
     .carouselContainer{
@@ -429,19 +427,21 @@ header{
 // SECCION CONTACTO
 .contacto{
     height: max-content;
+    display: flex;
+    justify-content: center;
     .contacto__contenedor{
-        background-color: $submenu-color-font;
         width: 90%;
-        margin: 30px 0 30px 0;
-        border: 5px solid $header-color-sm ;
+        padding: 1em;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
         .contacto__contenedor__titulo{
             display: flex;
             justify-content: center;
             .contacto__titulo{
                 color: $header-color-sm;
                 margin-bottom: 40px;
-                font-size: 40px;
+                font-size: 3em;
                 text-transform: uppercase;
                 font-weight: normal;
                 letter-spacing: 20px;
@@ -458,6 +458,10 @@ header{
                 justify-content: space-evenly;
                 .contacto__bloque__inputs{
                     width: 50%;
+                    .contacto__form__div{
+                        background-color: $header-color;
+                        color:$submenu-color-font
+                    }
                 }
                 .contacto__form__textarea{
                     width: 50%;
@@ -477,17 +481,17 @@ header{
                 .contacto__boton{
                     width: 15%;
                     font-size: 1.2em;
-                    background-color: $header-color-sm;
+                    background-color: $header-color;
                 }
                 :hover{
-                    background-color: #808080;
+                    background-color: $header-color-sm;
                 }
             }
         }
     }
 }
 .footer{
-    background-color: white;
+    background-color:$submenu-color-font;
     width: 100%;
     height: 30vh;
     display: flex;
@@ -516,58 +520,57 @@ header{
     }
 }
 // medias queries
-@media all and (min-width: 320px) and (max-width: 425px){
-    header{
-        background-color: $header-color-sm ;
-        position: fixed;
-        z-index: 4;
+@media only screen and (min-width: 320px) and (max-width: 500px){
+    html, body {
+        max-width:100% ;
+        overflow-x: hidden;
+    }
+    header{   
         width: 100%;
-    }
-    .logoContainer{
-        width: 40%;
-    }
-    .logo{
-        width: 100%;
-    }
-    .navbar{
-        display: flex;
-        justify-content: start;
-    }
-    .dropdown-menu{
-        background-color:#0c2f3d ;
-    }
-    .dropdown-menu .dropdown-item{
-        color: white;
-    }
-    .dropdown-menu .dropdown-item:hover{
-        background-color:#253f49 ;
-    }
-    .sec{
-        width:100%;
         height: auto;
-        background-color: #f1ece7;
+        background-color: $header-color-sm ;
+        z-index: 4;
+        position: fixed;
+        .navbar{
+            display: flex;
+            justify-content: start;
+            .logoContainer{
+                width: 50%;
+                .logo{
+                    width: 100%;
+                }
+            }
+            .dropdown-menu{
+                background-color:#0c2f3d ;
+                .dropdown-item{
+                    color: white;
+                }
+            }
+        }
     }
     .principal{
-        height: max-content;
         width: 100%;
+        height: max-content ;
+        padding-top: 2em;
         .principal__contenedorH1{
-            position: absolute;
-            z-index: 2;
-            margin-bottom: 2em;
             .principal__h1 {
                 font-family: 'Gilda Display', serif;
                 letter-spacing: 0.5em;
                 color: #ffffff;
-                font-size: large !important;
-                margin-left: 4em;
+                font-size: 2em;
+                padding-left: 0;
             }
         }
     }
     .carousel-indicators{
         display: none;
     }
+    .carousel-icon{
+        display: none;
+    }
     // nosotros con sass
     .nosotros{
+        width: 100%;
         height:max-content;
         background-size: cover;
         display: flex;
@@ -608,35 +611,46 @@ header{
     }
     .portfolio{
         width: 100%;
-        height: 80vh ; 
+        height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: black;
         .portfolio__titulo{
-            color: $titulos-sec-color;
-            padding-left: 0.8em;
-            font-size: 1.5em;
+            height: auto;
+            width: 100%;
+            background-color: $titulos-sec-color;
+            font-size: 3em;
             text-transform: uppercase;
-            font-weight: normal;
-            letter-spacing: 0.7em;
-            margin-top: 20px;
+            padding:0 0 0 0;
+            text-align: center;
+            // text-align: center;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            .span__portfolio{
+                display: none;
+            }
+            .portfolio__titulo--media{
+                display: block;
+            }
         }
         .portfolio__contenedor__cajas{
-            width: 80%;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 0 20px 0;
+            // align-items: center;
             .portfolio__cajaXV{
-                width: 100%;
+                width: 90%;
                 height: 50%;
                 border-radius: 10px;
-                background-image: url(../multimedia/images/caja15años.JPG);
+                background-image: url(../multimedia/images/caja15años.jpg);
                 background-size: cover;
-                background-position-x: 20px ;
+                background-position-y:-4.5em;
+                &:active{
+                    // transform: scale(1.05);
+                    transition: all 1s;
+                }
                 .portfolio__linkXV{
                     .textoXVaños{
                         display: none;
@@ -654,7 +668,7 @@ header{
                         .textoXVaños{
                             display: block;
                             color:antiquewhite;
-                            font-size: 50px;
+                            font-size: 30px;
                             text-transform: uppercase;
                             letter-spacing: 0.2em;
                             margin-left: 0.2em;
@@ -663,11 +677,16 @@ header{
                 }
             }
             .portfolio__cajaBodas{
-                width: 100%;
+                width: 90%;
                 height: 50%;
-                border-radius: 10px;
+                // border-radius: 10px;
                 background-image: url(../multimedia/images/cajaBodas.jpg);
                 background-size: cover;
+                background-position-y: -5em;
+                &:active{
+                    transform: scale(1.05);
+                    transition: all 1s;
+                }
                 .portfolio__linkBodas{
                     .textoBodas{
                         display: none;
@@ -685,7 +704,7 @@ header{
                         .textoBodas{
                             display: block;
                             color:antiquewhite;
-                            font-size: 50px;
+                            font-size: 30px;
                             text-transform: uppercase;
                             letter-spacing: 0.2em;
                         }
@@ -694,7 +713,281 @@ header{
             }
         }
     }
-
+        /* GALERIA */
+    .galeria__contenedor__titulo{
+        width: 100%;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .galeria__titulo{
+            color: $titulos-sec-color;
+            font-size: 2.5em;
+            font-family: 'Gilda Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 1em;
+        }
+    }
+    .galeria{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 0 2em 0;
+        .contenedorImgXV{
+            width: 90%;
+            height:auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(15, 12em);
+            text-align: center;
+            gap: 10px;
+            :hover{
+                transform: scale(1.05);
+                transition: all 0.8s;
+            }
+            .imgXV1{
+                grid-column: 1/2;
+                grid-row: 1/3;
+                background-image: url(../multimedia/images/galeria/XVaños/vertical-1.jpg);
+                background-size: cover;
+                background-position-y: -40px;
+            }
+            .imgXV2{
+                grid-column: 1/2;
+                grid-row: 3/4;
+                background-image: url(../multimedia/images/galeria/XVaños/horizontal-11.jpg);
+                background-size: cover;
+                background-position: bottom
+            }
+            .imgXV3{
+                grid-column: 1/2;
+                grid-row: 4/7;
+                background-image: url(../multimedia/images/galeria/XVaños/vertical-2.jpg);
+                background-size: cover;
+                background-position: center
+            }
+            .imgXV4{
+                grid-column: 1/2;
+                grid-row: 7/8;
+                background-image: url(../multimedia/images/galeria/XVaños/horizontal-2.jpg);
+                background-size: cover;
+            }
+            .imgXV5{
+                grid-column: 1/2;
+                grid-row: 8/11;
+                background-image: url(../multimedia/images/galeria/XVaños/vertical-3.jpg);
+                background-size: cover;
+            }
+            .imgXV6{
+                grid-column: 1/2;
+                grid-row: 11/13;
+                background-image: url(../multimedia/images/galeria/XVaños/vertical-12.jpg);
+                background-size: cover;
+                background-position-y:-5em;
+            }
+            .imgXV7{
+                grid-column: 1/2;
+                grid-row: 13/14;
+                background-image: url(../multimedia/images/galeria/XVaños/horizontal-9.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .imgXV8{
+                grid-column: 1/2;
+                grid-row: 14/16;
+                background-image: url(../multimedia/images/galeria/XVaños/horizontal-1.jpg);
+                background-size: cover;
+                background-position-y: center;
+                background-position-x: center;
+            }
+        } /* GALERIA BODAS */
+        .contenedorImgB{
+            width: 95%;
+            height:auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(8, 15em);
+            text-align: center;
+            gap: 10px;
+            :hover{
+                transform: scale(1.05);
+                transition: all 0.8s;
+            }
+            .imgB1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                background-image: url(../multimedia/images/galeria/bodas/boda-1.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .imgB2{
+                grid-column: 1/2;
+                grid-row: 2/3;
+                background-image: url(../multimedia/images/galeria/bodas/boda-2.jpg);
+                background-size: cover;
+                background-position-y: center;
+            }
+            .imgB3{
+                grid-column: 1/2;
+                grid-row: 3/4;
+                background-image: url(../multimedia/images/galeria/bodas/boda-3.jpg);
+                background-size: cover;
+                background-position-y: center;
+            }
+            .imgB4{
+                grid-column:1/2 ;
+                grid-row:4/5 ;
+                background-image: url(../multimedia/images/galeria/bodas/boda-4.jpg);
+                background-size: cover;
+                background-position-y: center
+            }
+            .imgB5{
+                grid-column:1/2;
+                grid-row: 5/6;
+                background-image: url(../multimedia/images/galeria/bodas/boda-5.jpg);
+                background-size: cover;
+            
+            }
+            .imgB6{
+                grid-column:1/2;
+                grid-row:6/7;
+                background-image: url(../multimedia/images/galeria/bodas/boda-6.jpg);
+                background-size: cover;
+                background-position-y: center
+            }
+            .imgB7{
+                grid-column:1/2 ;
+                grid-row: 7/8;
+                background-image: url(../multimedia/images/galeria/bodas/boda-7.jpg);
+                background-size: cover;
+                background-position-y: center
+            }
+            .imgB8{
+                grid-column: 1/2;
+                grid-row:8/9;
+                background-image: url(../multimedia/images/galeria/bodas/boda-8.jpg);
+                background-size: cover;
+            }
+        }
+    }
+    .servicios{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .servicios__titulo{
+            width: 100%;
+            font-size: 3em;
+            letter-spacing: normal;
+        }
+        .carouselContainer{
+            width: 90%;
+            height:50%;
+        }
+        .servicios__lens{
+            font-size: 2em;
+        }
+    }
+        // SECCION CONTACTO
+    .contacto{
+        height: 100vh;
+        width: 100%;
+        .contacto__contenedor{
+            width: 100%;
+            padding: 1em;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .contacto__contenedor__titulo{
+                display: flex;
+                justify-content: center;
+                .contacto__titulo{
+                    color: $header-color-sm;
+                    margin-bottom: 40px;
+                    font-size: 3em;
+                    text-transform: uppercase;
+                    letter-spacing:normal;
+                }
+            }
+            .contacto__form{
+                border: none;
+                .contacto__form__bloque{
+                    padding: 20px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    .contacto__bloque__inputs{
+                        width: 100%;
+                        .contacto__form__div{
+                            background-color: $header-color;
+                            color:$submenu-color-font
+                        }
+                    }
+                    .contacto__form__textarea{
+                        width: 100%;
+                        height: 14em;
+                        margin-left: 0;
+                        textarea{
+                            resize: none;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .contacto__boton__contenedor{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1em;
+                    .contacto__boton{
+                        width: 25%;
+                        font-size: 1.2em;
+                        background-color: $header-color;
+                    }
+                    :hover{
+                        background-color: $header-color-sm;
+                    }
+                }
+            }
+        }
+    }
+    // FOOTER
+    .footer{
+        background-color: $submenu-color-font;
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .footer__titulo{
+            margin-bottom: 1.5em;
+            font-weight: lighter;
+            text-transform: uppercase;
+            font-size: 2em;
+            text-align: center;
+        }
+        .footer__redes{
+            display: flex;
+            justify-content: space-around;
+            .footer__redes__item{
+                margin: 0 2em 0 2em;
+                .footer__redes__link{
+                    color: grey;
+                    text-decoration: none;
+                    font-size: 3em;
+                }
+                :hover{
+                    transform: scale(1.1);
+                    transition: all 0.4s;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 720px) and (max-width: 850px){
     // main con sass
