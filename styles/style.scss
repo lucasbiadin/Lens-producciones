@@ -65,10 +65,12 @@ header{
 // main con sass
 .principal{
     width: 100%;
-    height:max-content;
+    height:100vh;
     display: flex;
     align-items:center;
     justify-content: center;
+    // margin-top: 0.2em;
+    overflow: hidden;
     .principal__contenedorH1{
         width:max-content;
         height: max-content;
@@ -86,8 +88,13 @@ header{
             padding: 0 0 0 60px ;
         }
     }
+    .carouselContainer{
+        .imgMobile{
+            display: none;
+        }
+    }
 }
-// seccion nosotros con sass
+// seccion nosotros 
 .nosotros{
     height: 100vh;
     background-image: url(../multimedia/images/nosotros/camara.jpg);
@@ -95,20 +102,31 @@ header{
     display: flex;
     .cuadroAmarillo{
         background-color: $amarillo-complemetario;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .cuadroAmarillo__texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     .cuadroAmarillo__img{
         display: none;
     }
 }
+// seccion portfolio
 .portfolio{
     width: 100%;
-    height: 100vh ;
+    height: 90vh ;
     display: flex;
     flex-direction: row;
     align-items: center;
     .portfolio__titulo{
         color: $section-color;
-        padding-left: 0.8em;
+        padding-left: 0.5em;
         font-size: 70px;
         text-transform: uppercase;
         display: flex;
@@ -140,7 +158,7 @@ header{
         padding: 1em 0 1em 0;
         .portfolio__cajaXV{
             width: 45%;
-            height: 90%;
+            height: 100%;
             border-radius: 10px;
             background-image: url(../multimedia/images/caja15años.jpg);
             background-size: cover;
@@ -176,7 +194,7 @@ header{
         }
         .portfolio__cajaBodas{
             width: 45%;
-            height: 90%;
+            height: 100%;
             border-radius: 10px;
             background-image: url(../multimedia/images/cajaBodas.jpg);
             background-size: cover;
@@ -380,7 +398,7 @@ header{
     align-items: center;
     .servicios__titulo{
         width: 90%;
-        margin-bottom: 1.1em;
+        margin: 1.1em;
         color: $amarillo-complemetario;
         text-transform: uppercase;
         font-size: 3em;
@@ -401,7 +419,7 @@ header{
     .carouselContainer{
         width: ($var1) - ($var2);
         height: $alto - 50;
-        border: $amarillo-complemetario solid 5px;
+        border: $amarillo-complemetario solid 3px;
         display: flex;
         justify-content: center;
         .carousel{
@@ -426,9 +444,10 @@ header{
 }
 // SECCION CONTACTO
 .contacto{
-    height: max-content;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     .contacto__contenedor{
         width: 90%;
         padding: 1em;
@@ -520,7 +539,7 @@ header{
     }
 }
 // medias queries
-@media only screen and (min-width: 320px) and (max-width: 500px){
+@media screen and (min-width: 320px) and (max-width: 500px){
     html, body {
         max-width:100% ;
         overflow-x: hidden;
@@ -550,7 +569,7 @@ header{
     }
     .principal{
         width: 100%;
-        height: max-content ;
+        height: 100vh;
         padding-top: 2em;
         .principal__contenedorH1{
             .principal__h1 {
@@ -561,17 +580,22 @@ header{
                 padding-left: 0;
             }
         }
-    }
-    .carousel-indicators{
-        display: none;
-    }
-    .carousel-icon{
-        display: none;
+        .carouselContainer{
+            .imgLaptopSize{
+                display: none;
+            }
+            .imgMobile{
+                display: block;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
     }
     // nosotros con sass
     .nosotros{
         width: 100%;
-        height:max-content;
+        height:100vh;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -582,6 +606,8 @@ header{
             .cuadroAmarillo__img{
                 display: block;
                 width: 100%;
+                height: 100vh;
+                object-fit: cover;
                 z-index: 1;
             }
             .cuadroAmarillo__texto{
@@ -589,29 +615,30 @@ header{
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
                 z-index: 2;
-                position: absolute;
-                background-color: #f2dd1f8a;   
-                #nos{
-                    font-size: large;
-                    width: max-content;
+                position: absolute; 
+                background-color: #f8cd0d8a;
+                .nosotros__titulo{
+                    font-size: 3em;
+                    text-transform: uppercase;
+                    width: 100%;
+                    text-align: center;
                 }
                 .cuadroAmarillo__contenedorParrafo{
                     margin-top: 2px !important;
                     width: 80%;
                     .cuadroAmarillo__parrafo{
-                        font-size: 10px;
+                        font-size: 1.2em;
                     }
                 }
-                
             }
         }
     }
     .portfolio{
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
