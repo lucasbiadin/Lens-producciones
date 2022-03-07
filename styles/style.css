@@ -97,10 +97,6 @@ header {
   padding: 0 0 0 60px;
 }
 
-.principal .carouselContainer .imgMobile {
-  display: none;
-}
-
 .nosotros {
   height: 100vh;
   background-image: url(../multimedia/images/nosotros/camara.jpg);
@@ -589,7 +585,7 @@ header {
   transition: all 0.4s;
 }
 
-@media screen and (min-width: 320px) and (max-width: 500px) {
+@media only screen and (min-width: 320px) and (max-width: 500px) {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -629,14 +625,19 @@ header {
     font-size: 2em;
     padding-left: 0;
   }
-  .principal .carouselContainer .imgLaptopSize {
-    display: none;
-  }
-  .principal .carouselContainer .imgMobile {
-    display: block;
+  .principal .carouselContainer .carousel__img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+  .principal .carouselContainer .carousel__img1 {
+    object-position: 30%;
+  }
+  .principal .carouselContainer .carousel__img2 {
+    object-position: 60%;
+  }
+  .principal .carouselContainer .carousel__img3 {
+    object-position: 70%;
   }
   .nosotros {
     width: 100%;
@@ -954,6 +955,7 @@ header {
   }
   .contacto .contacto__contenedor {
     width: 100%;
+    height: 100vh;
     padding: 1em;
     border-radius: 10px;
     display: flex;
@@ -1014,7 +1016,7 @@ header {
   .footer {
     background-color: white;
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1024,7 +1026,7 @@ header {
     margin-bottom: 1.5em;
     font-weight: lighter;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
   }
   .footer .footer__redes {
