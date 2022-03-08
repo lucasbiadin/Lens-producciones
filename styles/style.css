@@ -66,14 +66,12 @@ header {
 }
 
 .sec {
-  width: 100%;
   background-color: #19282F;
-  height: max-content;
 }
 
 .principal {
   width: 100%;
-  height: 100vh;
+  height: 55rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +97,8 @@ header {
 }
 
 .nosotros {
-  height: 100vh;
+  width: 100%;
+  height: 55rem;
   background-image: url(../multimedia/images/nosotros/camara.jpg);
   background-size: cover;
   display: flex;
@@ -126,7 +125,7 @@ header {
 
 .portfolio {
   width: 100%;
-  height: 90vh;
+  height: 55rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -417,7 +416,7 @@ header {
 }
 
 .servicios {
-  height: 100vh;
+  height: 55rem;
   border-top: #0c2f3dfb 2px solid;
   border-bottom: #0c2f3dfb 2px solid;
   display: flex;
@@ -473,7 +472,7 @@ header {
 }
 
 .contacto {
-  height: 100vh;
+  height: 44rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -554,7 +553,7 @@ header {
 .footer {
   background-color: white;
   width: 100%;
-  height: 30vh;
+  height: 14rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1049,7 +1048,7 @@ header {
   }
 }
 
-@media (min-width: 720px) and (max-width: 850px) {
+@media only screen and (min-width: 500px) and (max-width: 850px) {
   .principal {
     height: max-content;
     z-index: 2;
@@ -1059,6 +1058,27 @@ header {
     background-image: url(../multimedia/images/nosotros/camara.jpg);
     background-size: cover;
     background-position: -15em;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1400px) {
+  .principal {
+    height: 35rem;
+  }
+  .nosotros {
+    height: 35rem;
+  }
+  .portfolio {
+    height: 35rem;
+  }
+  .servicios {
+    height: 35rem;
+  }
+  .contacto {
+    height: 35rem;
+  }
+  .footer {
+    height: 9rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
